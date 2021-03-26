@@ -3,7 +3,7 @@ package com.fariq.sqlite.db
 import android.provider.BaseColumns
 
 internal class DatabaseContract {
- 
+
     internal class NoteColumns : BaseColumns {
         companion object {
             const val TABLE_NAME = "note"

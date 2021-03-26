@@ -1,4 +1,4 @@
-package com.fariq.sqlite
+package com.fariq.sqlite.entity
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.fariq.sqlite.adapter.NoteAdapter
 import com.fariq.sqlite.databinding.ActivityMainBinding
 import com.fariq.sqlite.db.NoteHelper
-import com.fariq.sqlite.Note
+import com.fariq.sqlite.entity.Note
 import com.fariq.sqlite.helper.MappingHelper
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.Dispatchers
@@ -83,7 +83,6 @@ class MainActivity : AppCompatActivity() {
 
         if (data != null) {
             when (requestCode) {
-                // Akan dipanggil jika request codenya ADD
                 NoteAddUpdateActivity.REQUEST_ADD -> if (resultCode == NoteAddUpdateActivity.RESULT_ADD) {
                     val note = data.getParcelableExtra<Note>(NoteAddUpdateActivity.EXTRA_NOTE) as Note
 
@@ -92,13 +91,8 @@ class MainActivity : AppCompatActivity() {
 
                     showSnackbarMessage("Satu item berhasil ditambahkan")
                 }
-                // Update dan Delete memiliki request code sama akan tetapi result codenya berbeda
                 NoteAddUpdateActivity.REQUEST_UPDATE ->
                     when (resultCode) {
-                        /*
-                        Akan dipanggil jika result codenya  UPDATE
-                        Semua data di load kembali dari awal
-                        */
                         NoteAddUpdateActivity.RESULT_UPDATE -> {
 
                             val note = data.getParcelableExtra<Note>(NoteAddUpdateActivity.EXTRA_NOTE) as Note
@@ -109,10 +103,7 @@ class MainActivity : AppCompatActivity() {
 
                             showSnackbarMessage("Satu item berhasil diubah")
                         }
-                        /*
-                        Akan dipanggil jika result codenya DELETE
-                        Delete akan menghapus data dari list berdasarkan dari position
-                        */
+
                         NoteAddUpdateActivity.RESULT_DELETE -> {
                             val position = data.getIntExtra(NoteAddUpdateActivity.EXTRA_POSITION, 0)
 
@@ -125,11 +116,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    /**
-     * Tampilkan snackbar
-     *
-     * @param message inputan message
-     */
     private fun showSnackbarMessage(message: String) {
         Snackbar.make(binding.rvNotes, message, Snackbar.LENGTH_SHORT).show()
     }

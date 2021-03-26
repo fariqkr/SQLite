@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.fariq.sqlite.CustomOnItemClickListener
-import com.fariq.sqlite.Note
+import com.fariq.sqlite.entity.Note
 import com.fariq.sqlite.NoteAddUpdateActivity
 import com.fariq.sqlite.R
 import com.fariq.sqlite.databinding.ItemNoteBinding
