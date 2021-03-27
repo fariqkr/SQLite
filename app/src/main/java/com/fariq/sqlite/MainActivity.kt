@@ -42,14 +42,14 @@ class MainActivity : AppCompatActivity() {
             startActivityForResult(intent, NoteAddUpdateActivity.REQUEST_ADD)
         }
 
-        if (savedInstanceState == null) {
-            loadNotesAsync()
-        } else {
-            val list = savedInstanceState.getParcelableArrayList<Note>(EXTRA_STATE)
-            if (list != null) {
-                adapter.listNotes = list
-            }
-        }
+//        if (savedInstanceState == null) {
+//            loadNotesAsync()
+//        } else {
+//            val list = savedInstanceState.getParcelableArrayList<Note>(EXTRA_STATE)
+//            if (list != null) {
+//                adapter.listNotes = list
+//            }
+//        }
     }
 
     private fun loadNotesAsync() {

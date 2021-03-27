@@ -165,24 +165,24 @@ class NoteAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
         val alertDialogBuilder = AlertDialog.Builder(this)
         alertDialogBuilder.setTitle(dialogTitle)
         alertDialogBuilder
-            .setMessage(dialogMessage)
-            .setCancelable(false)
-            .setPositiveButton("Ya") { _, _ ->
-                if (isDialogClose) {
-                    finish()
-                } else {
-                    val result = noteHelper.deleteById(note?.id.toString()).toLong()
-                    if (result > 0) {
-                        val intent = Intent()
-                        intent.putExtra(EXTRA_POSITION, position)
-                        setResult(RESULT_DELETE, intent)
+                .setMessage(dialogMessage)
+                .setCancelable(false)
+                .setPositiveButton("Ya") { _, _ ->
+                    if (isDialogClose) {
                         finish()
                     } else {
-                        Toast.makeText(this@NoteAddUpdateActivity, "Gagal menghapus data", Toast.LENGTH_SHORT).show()
+                        val result = noteHelper.deleteById(note?.id.toString()).toLong()
+                        if (result > 0) {
+                            val intent = Intent()
+                            intent.putExtra(EXTRA_POSITION, position)
+                            setResult(RESULT_DELETE, intent)
+                            finish()
+                        } else {
+                            Toast.makeText(this@NoteAddUpdateActivity, "Gagal menghapus data", Toast.LENGTH_SHORT).show()
+                        }
                     }
                 }
-            }
-            .setNegativeButton("Tidak") { dialog, _ -> dialog.cancel() }
+                .setNegativeButton("Tidak") { dialog, _ -> dialog.cancel() }
         val alertDialog = alertDialogBuilder.create()
         alertDialog.show()
     }
