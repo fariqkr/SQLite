@@ -1,4 +1,4 @@
-package com.fariq.sqlite
+package com.fariq.consumerapp
 
 import android.content.Intent
 import android.database.ContentObserver
@@ -8,11 +8,11 @@ import android.os.HandlerThread
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.fariq.sqlite.adapter.NoteAdapter
-import com.fariq.sqlite.databinding.ActivityMainBinding
-import com.fariq.sqlite.db.DatabaseContract.NoteColumns.Companion.CONTENT_URI
-import com.fariq.sqlite.entity.Note
-import com.fariq.sqlite.helper.MappingHelper
+import com.fariq.consumerapp.adapter.NoteAdapter
+import com.fariq.consumerapp.databinding.ActivityMainBinding
+import com.fariq.consumerapp.db.DatabaseContract.NoteColumns.Companion.CONTENT_URI
+import com.fariq.consumerapp.entity.Note
+import com.fariq.consumerapp.helper.MappingHelper
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope

@@ -1,4 +1,4 @@
-package com.fariq.sqlite
+package com.fariq.consumerapp
 
 import android.content.ContentValues
 import android.net.Uri
@@ -9,13 +9,13 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.fariq.sqlite.databinding.ActivityNoteAddUpdateBinding
-import com.fariq.sqlite.db.DatabaseContract.NoteColumns.Companion.CONTENT_URI
-import com.fariq.sqlite.db.DatabaseContract.NoteColumns.Companion.DATE
-import com.fariq.sqlite.db.DatabaseContract.NoteColumns.Companion.DESCRIPTION
-import com.fariq.sqlite.db.DatabaseContract.NoteColumns.Companion.TITLE
-import com.fariq.sqlite.entity.Note
-import com.fariq.sqlite.helper.MappingHelper
+import com.fariq.consumerapp.databinding.ActivityNoteAddUpdateBinding
+import com.fariq.consumerapp.db.DatabaseContract.NoteColumns.Companion.CONTENT_URI
+import com.fariq.consumerapp.db.DatabaseContract.NoteColumns.Companion.DATE
+import com.fariq.consumerapp.db.DatabaseContract.NoteColumns.Companion.DESCRIPTION
+import com.fariq.consumerapp.db.DatabaseContract.NoteColumns.Companion.TITLE
+import com.fariq.consumerapp.entity.Note
+import com.fariq.consumerapp.helper.MappingHelper
 import java.text.SimpleDateFormat
 import java.util.*
 

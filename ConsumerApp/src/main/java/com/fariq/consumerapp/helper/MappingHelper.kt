@@ -1,8 +1,8 @@
-package com.fariq.sqlite.helper
+package com.fariq.consumerapp.helper
 
 import android.database.Cursor
-import com.fariq.sqlite.entity.Note
-import com.fariq.sqlite.db.DatabaseContract
+import com.fariq.consumerapp.db.DatabaseContract
+import com.fariq.consumerapp.entity.Note
 
 object MappingHelper {
 

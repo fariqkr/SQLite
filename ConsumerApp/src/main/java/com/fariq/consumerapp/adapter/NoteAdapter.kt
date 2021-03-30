@@ -1,4 +1,4 @@
-package com.fariq.sqlite.adapter
+package com.fariq.consumerapp.adapter
 
 import android.app.Activity
 import android.content.Intent
@@ -6,11 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.fariq.sqlite.CustomOnItemClickListener
-import com.fariq.sqlite.entity.Note
-import com.fariq.sqlite.NoteAddUpdateActivity
-import com.fariq.sqlite.R
-import com.fariq.sqlite.databinding.ItemNoteBinding
+import com.fariq.consumerapp.CustomOnItemClickListener
+import com.fariq.consumerapp.NoteAddUpdateActivity
+import com.fariq.consumerapp.R
+import com.fariq.consumerapp.databinding.ItemNoteBinding
+import com.fariq.consumerapp.entity.Note
 import java.util.*
 
 /**
